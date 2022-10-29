@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block title %} IP LookUp {% endblock %}
+
+
+{% block body %}
+
+<div class="container">
+  <br>
+  <br>
+  <br>
+<form action="{{url_for('Index')}}" method="post">
+
+<!-- Input TextField -->
+    <center>
+    <div class="form-group">
+      <input type="text" name = "search" placeholder="Enter IP Address">
+    </div>
+
+    <input type="submit"  value="Search">
+    
+</form>
+<!-- Display the Information -->
+    <br>
+    <br>
+    <h4>Your Current Information</h4>
+    <br>
+    <p>IP Address  : {{data.ip}}</p>
+    <p>IP Location : {{data.city}}</p>
+    <p>IP Country  : {{data.country}}</p>
+    <p>Internet Network Provider : {{data.org}}</p>
+  </center>
+  
+</div>
+<!-- To set Background -->
+<style type="text/css">
+  
+  body{
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2F734860864186923145%2F&psig=AOvVaw2WddWfEyDYeq0aM9bT9u11&ust=1667112066695000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCICytsbqhPsCFQAAAAAdAAAAABAO);
+  }
+</style>
+
+{% endblock %}
